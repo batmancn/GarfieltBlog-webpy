@@ -1,0 +1,8 @@
+### 运行index.py时候端口被占用？
+
+如果在运行index.py时候出现端口被占用（raise socket.error），此时只要在命令后面指定端口即可。命令：python index.py 8888。其中8888是端口号。
+
+
+### 如何后台运行？
+
+nohup commands &
