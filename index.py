@@ -15,9 +15,12 @@ from setting import Setting
 from apps.front import *
 from apps.manage import *
 from apps.tasks import *
+from apps.webrtc import *
+from apps.meituxiuxiu import *
 from install import *
 
 web.config.debug = Setting.is_debug
+Setting.login_url = '/login'
 
 urls = (
     #Front
@@ -59,7 +62,16 @@ urls = (
     '/manage/files', 'ManageFiles',
     '/manage/user', 'ManageUser',
     '/manage/logout', 'ManageLogout',
-    '/manage/result/(.+)', 'ManageResult'
+    '/manage/result/(.+)', 'ManageResult',
+    # add for webrtc
+    '/webrtc/textchat', 'TextChat',
+    # add for meituxiuxiu
+    '/meituxiuxiu/wanzhengban', 'WanZhengBan',
+    '/meituxiuxiu/meihuatupian', 'MeiHuaTuPian',
+    '/meituxiuxiu/pintu', 'PinTu',
+    '/meituxiuxiu/touxiangbianjiqi', 'TouXiangBianJiQi',
+    # add for test/meituxiuxiu
+    '/test/meituxiuxiu', 'MeiTuXiuXiu'
 )
 
 #Init Callback interface
