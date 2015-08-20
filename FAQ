@@ -6,3 +6,13 @@
 ### 如何后台运行？
 
 nohup commands &
+
+
+### 如何进入管理界面？
+
+在setting.py中，有个login_url，通过这个url进入管理界面。
+
+
+### Garfilt的manage/install界面显示的sqlite语句有问题？
+
+是的，正确的应该是sqlite.patch中所写，就是把PRIMARY KEY ASC定义到主键后面。

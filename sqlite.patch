@@ -1,0 +1,60 @@
+CREATE TABLE [Garfielt_categorys] (
+[category_id] INTEGER NOT NULL PRIMARY KEY ASC autoincrement,
+[category_name] VARCHAR(40) NOT NULL,
+[category_type] TINYINT(1) NOT NULL DEFAULT 0,
+[category_sort] INTEGER NOT NULL DEFAULT 0,
+[category_short] VARCHAR(40),
+[category_description] VARCHAR(100)
+);
+CREATE TABLE [Garfielt_comments] (
+[comments_id] INTEGER NOT NULL PRIMARY KEY ASC autoincrement,
+[comments_post_id] INTEGER NOT NULL,
+[comments_author] VARCHAR(40) NOT NULL DEFAULT '',
+[comments_email] VARCHAR(40) NOT NULL DEFAULT '',
+[comments_url] VARCHAR(100) NOT NULL DEFAULT '',
+[comments_ip] VARCHAR(20) NOT NULL DEFAULT '',
+[comments_date] DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+[comments_content] TEXT NOT NULL
+);
+CREATE TABLE [Garfielt_kvdata] (
+[kv_id] INTEGER NOT NULL PRIMARY KEY ASC autoincrement,
+[kv_name] VARCHAR(40) NOT NULL DEFAULT '',
+[kv_value] TEXT NOT NULL DEFAULT ''
+);
+CREATE TABLE [Garfielt_links] (
+[link_id] INTEGER NOT NULL PRIMARY KEY ASC autoincrement,
+[link_name] VARCHAR(255) NOT NULL,
+[link_url] VARCHAR(255) NOT NULL,
+[link_description] VARCHAR(255) DEFAULT '',
+[link_visible] TINYINT(1) NOT NULL DEFAULT 1
+);
+CREATE TABLE [Garfielt_posts] (
+[post_id] INTEGER NOT NULL PRIMARY KEY ASC autoincrement,
+[post_category] INTEGER NOT NULL,
+[post_type] TINYINT(1) NOT NULL DEFAULT 0,
+[post_status] TINYINT(1) DEFAULT 1,
+[post_ontop] TINYINT(1) DEFAULT 0,
+[post_title] VARCHAR(100) NOT NULL,
+[post_url] VARCHAR(60) DEFAULT '',
+[post_date] DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+[post_editdate] DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+[post_tags] VARCHAR(100) DEFAULT '',
+[post_view] INTEGER NOT NULL DEFAULT 0,
+[post_com_num] INTEGER NOT NULL DEFAULT 0,
+[post_com_status] TINYINT(1) NOT NULL DEFAULT 1,
+[post_content] TEXT
+);
+CREATE TABLE [Garfielt_tags] (
+[tag_id] INTEGER NOT NULL PRIMARY KEY ASC autoincrement,
+[tag_name] VARCHAR(20) NOT NULL
+);
+CREATE TABLE [Garfielt_relations] (
+[rid] INTEGER NOT NULL PRIMARY KEY ASC autoincrement,
+[tid] INTEGER NOT NULL,
+[pid] INTEGER NOT NULL
+);
+CREATE TABLE [Garfielt_session] (
+[session_id] char(128) UNIQUE NOT NULL,
+[atime] timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+[data] text
+);
