@@ -16,3 +16,8 @@ nohup commands &
 ### Garfilt的manage/install界面显示的sqlite语句有问题？
 
 是的，正确的应该是sqlite.patch中所写，就是把PRIMARY KEY ASC定义到主键后面。
+
+
+### 管理界面的用户名密码是什么?
+
+admin/admin
