@@ -34,7 +34,9 @@ setting = {
     'db_user': 'root',
     'db_passwd': 'root',
     "db_prefix": "Garfielt_",
-    'config': {}
+    'config': {
+        'webcdn':'static/js/jquery-1.7.2.min.js'
+    }
 }
 
 if 'SERVER_SOFTWARE' in os.environ:

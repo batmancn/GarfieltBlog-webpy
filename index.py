@@ -18,9 +18,9 @@ from apps.tasks import *
 from apps.webrtc import *
 from apps.meituxiuxiu import *
 from install import *
+from apps.myhao123 import *
 
 web.config.debug = Setting.is_debug
-Setting.login_url = '/login'
 
 urls = (
     #Front
@@ -45,6 +45,7 @@ urls = (
     '/manage/main/(\w+)', 'Manage',
     '/manage/postlist', 'ManagePostlist',
     '/manage/postlist/(\w+)/(\d+)', 'ManagePostlist',
+#    '/manage/post/(\w+)/(\d+)', 'ManagePostlist',
     '/manage/post/new', 'ManagePost',
     '/manage/post/(\d+)', 'ManagePost',
     '/manage/category', 'ManageCategory',
@@ -71,7 +72,9 @@ urls = (
     '/meituxiuxiu/pintu', 'PinTu',
     '/meituxiuxiu/touxiangbianjiqi', 'TouXiangBianJiQi',
     # add for test/meituxiuxiu
-    '/test/meituxiuxiu', 'MeiTuXiuXiu'
+    '/test/1', 'TestOne',
+    # add for hao123_080520
+    '/myhao123', 'MyHao123',
 )
 
 #Init Callback interface
