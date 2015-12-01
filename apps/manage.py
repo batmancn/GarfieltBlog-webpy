@@ -44,7 +44,8 @@ class Manage:
 class ManagePostlist:
     def GET(self, action ='view', page = 1):
         if action == 'delete':
-            model.Posts.delete(pid)
+#            model.Posts.delete(pid)
+            model.Posts.remove(page)
         cats = model.Category.get_all()
         curpage = int(page)
         totalpost =  model.Posts.count()

@@ -45,7 +45,7 @@ urls = (
     '/manage/main/(\w+)', 'Manage',
     '/manage/postlist', 'ManagePostlist',
     '/manage/postlist/(\w+)/(\d+)', 'ManagePostlist',
-#    '/manage/post/(\w+)/(\d+)', 'ManagePostlist',
+    '/manage/post/(\w+)/(\d+)', 'ManagePostlist',
     '/manage/post/new', 'ManagePost',
     '/manage/post/(\d+)', 'ManagePost',
     '/manage/category', 'ManageCategory',
