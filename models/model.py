@@ -64,7 +64,8 @@ class _Posts(baseModel):
                                vars=locals())
         return self.select(order='post_id DESC',
                            limit = plimit,
-                           offset = int(poffset-1) * int(plimit))
+                           offset = int(poffset-1) * int(plimit),
+                           vars=locals())
                            
     def count(self, types = '', key = None):
         if types == 'tag':

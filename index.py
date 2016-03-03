@@ -19,6 +19,7 @@ from apps.webrtc import *
 from apps.meituxiuxiu import *
 from install import *
 from apps.myhao123 import *
+from apps.recruitmentInformationReport import *
 
 web.config.debug = Setting.is_debug
 
@@ -75,6 +76,8 @@ urls = (
     '/test/1', 'TestOne',
     # add for hao123_080520
     '/myhao123', 'MyHao123',
+    # add for recruitment information report
+    '/zhaopin', 'RecruitmentInformationReport',
 )
 
 #Init Callback interface

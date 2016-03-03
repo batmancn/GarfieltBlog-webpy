@@ -124,7 +124,9 @@ $def with (tpldata)
 			<li class="stnav stnave">
 				<label><input name="pcomment" type="checkbox" value="1" 
 				$if tpldata['epost'].post_com_status == 1 or tpldata['epost'].post_com_status == "":
-					checked
+					checked = true
+                $else:
+                    checked = false
 				>允许评论</label>
 			</li>
 			<li>

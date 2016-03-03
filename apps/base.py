@@ -32,6 +32,7 @@ class _Render:
         self.tpldata['related_tags'] = model.Tags.get_relations()
         self.tpldata['links'] = model.Links.get_all()
         self.tpldata['recent_comments'] = model.Comments.get_recent()
+        self.tpldata['post'] = model.Posts.get_all(None, 20)
         self.tplfunc['Post_format'] = post_format
     
     def render(self, tplname, **kwargs):
